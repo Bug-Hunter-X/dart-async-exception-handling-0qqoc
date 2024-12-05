@@ -1,0 +1,5 @@
+# Silent Failure in Async Dart Function Due to Unhandled Exceptions
+
+This repository demonstrates a common error in Dart asynchronous programming:  unhandled exceptions in `async` functions that lead to silent failures. The `fetchData` function fetches data from an API.  If an error occurs (e.g., network issue, API error), the `catch` block prints an error message but doesn't re-throw the exception or otherwise signal the failure to the calling function. This can cause the application to continue running without properly handling the error, potentially leading to unexpected behavior or data inconsistencies. 
+
+The solution provides improved error handling, ensuring that any exceptions are properly propagated and handled.  This prevents silent failures and enhances the application's robustness.
